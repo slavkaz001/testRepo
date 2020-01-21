@@ -10,6 +10,14 @@
                 "description": "Name of the Azure Data Explorer Cluster. Use only lowercase letters and numbers."
             }
         },
+        "clustername_seq": {
+            "minLength": 4,
+            "maxLength": 4,
+            "type": "String",
+            "metadata": {
+                "description": "Unique number to append to the cluster name to make it unique."
+            }
+        },
         "location": {
             "type": "String",
             "metadata": {
@@ -68,7 +76,7 @@
         {
             "type": "Microsoft.Kusto/Clusters",
             "apiVersion": "[variables('apiVersion')]",
-            "name": "[parameters('name')]",
+            "name": "[concat(parameters('name'),parameters('clustername_seq'))]",
             "location": "[parameters('location')]",
             "tags": "[parameters('tags')]",
             "sku": {
