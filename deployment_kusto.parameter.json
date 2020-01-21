@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+      "name": {
+        "type": "String",
+        "value": "adxcluster"
+      },
+      "location": {
+        "type": "String",
+        "value": "eastus"
+      },
+      "properties": {
+        "type": "Object",
+        "value": {
+          "enableStreamingIngest": false
+        }
+      },
+      "tags": {
+        "type": "Object",
+        "value": {}
+      },
+      "skuName": {
+        "type": "String",
+        "value": "Standard_D11_v2"
+      },
+      "tier": {
+        "type": "String",
+        "value": "Standard"
+      }
+    }
+}
