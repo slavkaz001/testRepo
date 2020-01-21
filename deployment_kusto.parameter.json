@@ -5,6 +5,9 @@
       "name": {
         "value": "adxcluster"
       },
+      "clustername_seq": {
+        "value": "0001"
+      },
       "location": {
         "value": "eastus"
       },
